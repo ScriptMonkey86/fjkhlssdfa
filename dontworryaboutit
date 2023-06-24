@@ -440,9 +440,9 @@ function lib:Window(text, preset, closebind)
             local ButtonCorner = Instance.new("UICorner")
             local ButtonTitle = Instance.new("TextLabel")
 
-           Button.Name = "Button"
+        Button.Name = "Button"
         Button.Parent = Tab
-        Button.BackgroundColor3 = Color3.fromRGB(34, 34, 34)
+        Button.BackgroundColor3 = Color3.fromRGB(69, 68, 68)
         Button.BackgroundTransparency = 0.7 -- Adjust transparency level here (0.7 = 30% transparent)
         Button.Size = UDim2.new(0, 363, 0, 42)
         Button.AutoButtonColor = false
