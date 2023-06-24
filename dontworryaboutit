@@ -440,15 +440,17 @@ function lib:Window(text, preset, closebind)
             local ButtonCorner = Instance.new("UICorner")
             local ButtonTitle = Instance.new("TextLabel")
 
-            Button.Name = "Button"
-            Button.Parent = Tab
-            Button.BackgroundColor3 = Color3.fromRGB(34, 34, 34)
-            Button.Size = UDim2.new(0, 363, 0, 42)
-            Button.AutoButtonColor = false
-            Button.Font = Enum.Font.SourceSans
-            Button.Text = ""
-            Button.TextColor3 = Color3.fromRGB(0, 0, 0)
-            Button.TextSize = 14.000
+           Button.Name = "Button"
+        Button.Parent = Tab
+        Button.BackgroundColor3 = Color3.fromRGB(34, 34, 34)
+        Button.BackgroundTransparency = 0.7 -- Adjust transparency level here (0.7 = 30% transparent)
+        Button.Size = UDim2.new(0, 363, 0, 42)
+        Button.AutoButtonColor = false
+        Button.Font = Enum.Font.SourceSans
+        Button.Text = ""
+        Button.TextColor3 = Color3.fromRGB(0, 0, 0)
+        Button.TextSize = 14.000
+
 
             ButtonCorner.CornerRadius = UDim.new(0, 5)
             ButtonCorner.Name = "ButtonCorner"
