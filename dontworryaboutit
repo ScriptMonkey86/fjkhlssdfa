@@ -96,32 +96,16 @@ function lib:Window(text, preset, closebind)
     local TabFolder = Instance.new("Folder")
     local DragFrame = Instance.new("Frame")
 
-    local Main = Instance.new("ImageLabel")
-Main.Name = "Main"
-Main.Parent = ui
-Main.AnchorPoint = Vector2.new(0.5, 0.5)
-Main.BackgroundTransparency = 1 -- Set transparency to 1 for the image to be visible
-Main.BorderSizePixel = 0
-Main.Position = UDim2.new(0.5, 0, 0.5, 0)
-Main.Size = UDim2.new(0, 0, 0, 0)
-Main.Image = "rbxassetid://13879386379" -- Set the image asset ID here
-Main.ScaleType = Enum.ScaleType.Fill -- Stretch the image to fill the UI element
-Main.Visible = true
-
--- Optional: If you want to maintain the color overlay from the original code, you can use another Frame as the parent of the ImageLabel.
-local Overlay = Instance.new("Frame")
-Overlay.Name = "Overlay"
-Overlay.Parent = Main
-Overlay.AnchorPoint = Vector2.new(0.5, 0.5)
-Overlay.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
-Overlay.BackgroundTransparency = 0.5 -- Adjust transparency level here
-Overlay.BorderSizePixel = 0
-Overlay.Position = UDim2.new(0.5, 0, 0.5, 0)
-Overlay.Size = UDim2.new(1, 0, 1, 0)
-Overlay.ClipsDescendants = true
-
--- Set the ImageLabel as the new Main UI element
-Main = Overlay
+    Main.Name = "Main"
+    Main.Parent = ui
+    Main.AnchorPoint = Vector2.new(0.5, 0.5)
+    Main.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+    Main.BackgroundTransparency = 0.5 -- Adjust transparency level here
+    Main.BorderSizePixel = 0
+    Main.Position = UDim2.new(0.5, 0, 0.5, 0)
+    Main.Size = UDim2.new(0, 0, 0, 0)
+    Main.ClipsDescendants = true
+    Main.Visible = true
 
 
     TabHold.Name = "TabHold"
