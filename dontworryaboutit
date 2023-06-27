@@ -96,16 +96,15 @@ function lib:Window(text, preset, closebind)
     local TabFolder = Instance.new("Folder")
     local DragFrame = Instance.new("Frame")
 
-    local Main = Instance.new("ImageLabel")
     Main.Name = "Main"
     Main.Parent = ui
     Main.AnchorPoint = Vector2.new(0.5, 0.5)
-    Main.BackgroundTransparency = 1 -- Set transparency to 1 for the image to be visible
+    Main.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+    Main.BackgroundTransparency = 0.5 -- Adjust transparency level here
     Main.BorderSizePixel = 0
     Main.Position = UDim2.new(0.5, 0, 0.5, 0)
     Main.Size = UDim2.new(0, 0, 0, 0)
-    Main.Image = "rbxassetid://13879386379" -- Set the image asset ID here
-    Main.ScaleType = Enum.ScaleType.Fill -- Stretch the image to fill the UI element
+    Main.ClipsDescendants = true
     Main.Visible = true
 
 
