@@ -1,0 +1,86 @@
+-- Create the GUI
+local gui = Instance.new("ScreenGui")
+gui.Name = "MonkeyHub"
+gui.Parent = game:GetService("CoreGui")
+
+-- Create the main window
+local mainFrame = Instance.new("Frame")
+mainFrame.Name = "MainFrame"
+mainFrame.Size = UDim2.new(0, 300, 0, 200)
+mainFrame.Position = UDim2.new(0.5, -150, 0.5, -100)
+mainFrame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+mainFrame.BackgroundTransparency = 0.5
+mainFrame.BorderSizePixel = 0
+mainFrame.Parent = gui
+
+-- Function to create buttons
+local function createButton(name, callback)
+    local button = Instance.new("TextButton")
+    button.Name = name
+    button.Size = UDim2.new(0, 200, 0, 50)
+    button.Position = UDim2.new(0.5, -100, 0, 50)
+    button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    button.TextColor3 = Color3.fromRGB(0, 0, 0)
+    button.Text = name
+    button.Parent = mainFrame
+
+    button.MouseButton1Click:Connect(function()
+        callback()
+    end)
+end
+
+-- Create buttons in the main window
+createButton("Infinite Yield", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source", true))()
+end)
+
+createButton("CMD-X", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/CMD-X/CMD-X/master/Source", true))()
+end)
+
+createButton("Nameless Admin", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/FilteringEnabled/NamelessAdmin/main/Source"))()
+end)
+
+createButton("GhostHub", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/GhostHub'))()
+end)
+
+createButton("UnFair Hub", function()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/rblxscriptsnet/unfair/main/rblxhub.lua'), true))()
+end)
+
+createButton("EzHub", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/debug420/Ez-Hub/master/EzHub.lua'))()
+end)
+
+createButton("Parvus", function()
+    local IsDevelopmentBranch, NotificationTime = false, 5
+    local Branch = IsDevelopmentBranch and "development" or "main"
+    local Source = "https://raw.githubusercontent.com/AlexR32/Parvus/" .. Branch .. "/"
+    loadstring(game:HttpGet(Source .. "Loader.lua"),"Loader")(Branch,NotificationTime)
+end)
+
+createButton("Script Searcher", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/AZYsGithub/chillz-workshop/main/ScriptSearcher"))()
+end)
+
+createButton("Chat translator", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ScriptMonkey86/ballsweiutyweiut/main/dsd"))()
+end)
+
+createButton("Key Teleport", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/BzdqXTDc"))()
+end)
+
+createButton("Chat Bubbles", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/rouxhaver/scripts-2/main/RGB%20Bubble%20chat.Lua"))()
+end)
+
+createButton("Player lifter", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/rouxhaver/scripts-3/main/player%20lifter.lua"))()
+end)
+
+createButton("Delete GUI", function()
+    gui:Destroy()
+end)
